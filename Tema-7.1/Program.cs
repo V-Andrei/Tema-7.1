@@ -68,22 +68,22 @@ namespace Tema_7._1
             {
                 try
                 {
-                    Console.WriteLine("\nStart downloading...");
+                    Console.WriteLine("\n Start downloading...");
                     webClient.DownloadFile("https://image.shutterstock.com/image-vector/cute-happy-ninja-smiling-his-260nw-359792546.jpg", "../../ninja.jpg");
-                    Console.WriteLine("\n-> Download successfully!");
+                    Console.WriteLine("\n Download successfully!");
                 }
 
                 catch (ArgumentException)
                 {
-                    Console.Error.WriteLine("\n-> Error: You have entered an empty URL!");
+                    Console.Error.WriteLine("\n Error: You have entered an empty URL!");
                 }
                 catch (WebException)
                 {
-                    Console.Error.WriteLine("\n-> Error: You have entered an invalid URL!");
+                    Console.Error.WriteLine("\n Error: You have entered an invalid URL!");
                 }
                 catch (NotSupportedException)
                 {
-                    Console.Error.WriteLine("\n-> Error: This method does not support simultaneous downloads!");
+                    Console.Error.WriteLine("\n Error: This method does not support simultaneous downloads!");
                 }
                 finally
                 {
@@ -107,47 +107,47 @@ namespace Tema_7._1
 
             catch (ArgumentNullException)
             {
-                Console.Error.WriteLine("Path is null.");
+                Console.Error.WriteLine("Error: Path is null.");
             }
 
             catch (ArgumentException)
             {
-                Console.Error.WriteLine("Path is a zero-length string, contains only white space, or contains one or more invalid characters.");
+                Console.Error.WriteLine("Error: Path is a zero-length string, contains only white space, or contains one or more invalid characters.");
             }
 
             catch (PathTooLongException)
             {
-                Console.Error.WriteLine("The specified path, file name, or both exceed the system-defined maximum length.");
+                Console.Error.WriteLine("Error: The specified path, file name, or both exceed the system-defined maximum length.");
             }
 
             catch (DirectoryNotFoundException)
             {
-                Console.Error.WriteLine("The specified path is invalid.");
+                Console.Error.WriteLine("Error: The specified path is invalid.");
             }
 
             catch (FileNotFoundException)
             {
-                Console.Error.WriteLine("The file specified in path was not found.");
+                Console.Error.WriteLine("Error: The file specified in path was not found.");
             }
 
             catch (IOException)
             {
-                Console.Error.WriteLine("An I/O error occurred while opening the file.");
+                Console.Error.WriteLine("Error: An I/O error occurred while opening the file.");
             }
 
             catch (UnauthorizedAccessException)
             {
-                Console.Error.WriteLine("The caller does not have the required permission.");
+                Console.Error.WriteLine("Error: The caller does not have the required permission.");
             }
 
             catch (NotSupportedException)
             {
-                Console.Error.WriteLine("Path is in an invalid format.");
+                Console.Error.WriteLine("Error: Path is in an invalid format.");
             }
 
             catch (SecurityException)
             {
-                Console.Error.WriteLine("The caller does not have the required permission.");
+                Console.Error.WriteLine("Error: The caller does not have the required permission.");
             }
         }
     }
